@@ -3,35 +3,30 @@ import React, { Component } from 'react';
 import './Products.css'
 
 export default class Products extends Component {
-    
-    state = {
-        fetchedProducts: [],
-    }
-    
-    componentDidMount() {
-        fetch('/grocery')
-        .then(res => res.json())
-        .then(fetchedProducts => this.setState({fetchedProducts}, () => console.log('products fetched...', fetchedProducts)))
-    }
-    
+      
     renderProducts = (product, index) => {
-        // if(product.name.toLowerCase().includes(this.props)) 
         return (
-            <div className="product-card" key={index}>
-                <p>{product.name} {product.rating}</p>
-                <img className="product-img" src={require(`../../data/images/${product.image}`)}></img>
+            <div key={index} className="product-grid">
+                <img 
+                    className="product-img" 
+                    src={require(`../../data/images/${product.image}`)} 
+                    alt="">
+                </img>
+                <h3 className="product-data">{product.name}</h3>
+                <h3 className="product-data">{`Price: $ ${product.price}`}</h3>
+                <h4 className="product-data">{`Category: ${product.category}`}</h4>
+                <h4 className="product-data">{`Rating: ${product.rating}`}</h4>
             </div>
         )
     } 
 
     render() {
-        // console.log('props', this.props)
         
-        const { fetchedProducts } = this.state
+        const { products } = this.props
 
         return (
-            <div>
-                {fetchedProducts.map(this.renderProducts)}
+            <div className="product-card">
+                {products.map(this.renderProducts)}
             </div>
         )
     }

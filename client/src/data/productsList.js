@@ -7,9 +7,9 @@ const products = [
     price: 28.1,
     rating: 4
   }, {
-    name: "Sweet fresh stawberry",
+    name: "Sweet fresh strawberry",
     category: "fruit",
-    description: "Sweet fresh stawberry on the wooden table",
+    description: "Sweet fresh strawberry on the wooden table",
     image: "1.jpg",
     price: 29.45,
     rating: 4
@@ -49,7 +49,7 @@ const products = [
     price: 18.19,
     rating: 2
   }, {
-    name: "Hazelnut in black ceramic bowl",
+    name: "Hazelnut",
     category: "vegetable",
     description: "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
     image: "7.jpg",
@@ -57,9 +57,9 @@ const products = [
     price: 27.35,
     rating: 0
   }, {
-    name: "Fresh stawberry",
+    name: "Fresh strawberry",
     category: "fruit",
-    description: "Sweet fresh stawberry on the wooden table",
+    description: "Sweet fresh strawberry on the wooden table",
     image: "8.jpg",
     price: 28.59,
     rating: 4
@@ -92,7 +92,7 @@ const products = [
     price: 16.3,
     rating: 2
   }, {
-    name: "Healthy breakfast",
+    name: "Blueberries",
     category: "fruit",
     description: "Healthy breakfast set. rice cereal or porridge with berries and honey over rustic wood background",
     image: "13.jpg",
@@ -106,7 +106,7 @@ const products = [
     price: 28.79,
     rating: 1
   }, {
-    name: "Baked stuffed portabello mushrooms",
+    name: "Mushrooms",
     category: "bakery",
     description: "Homemade baked stuffed portabello mushrooms with spinach and cheese",
     image: "15.jpg",
@@ -149,7 +149,7 @@ const products = [
     price: 21.48,
     rating: 4
   }, {
-    name: "Vegan food",
+    name: "Green tomatoes",
     category: "vegetable",
     description: "Concept of vegan food",
     image: "21.jpg",
@@ -198,7 +198,7 @@ const products = [
     price: 27.81,
     rating: 5
   }, {
-    name: "Cuban sandwiche",
+    name: "Cuban bread",
     category: "bakery",
     description: "Homemade traditional cuban sandwiches with ham pork and cheese",
     image: "28.jpg",
@@ -212,12 +212,10 @@ const products = [
     price: 29.97,
     rating: 3
   }, {
-    name: "Smoothie with chia seeds",
-    category: "fruit",
+    name: "Honey",
+    category: "bakery",
     description: "Glass of red strawberry smoothie with chia seeds, served with retro cocktail tube, fresh mint and strawberries over wooden table",
     image: "30.jpg",
-    "height": 600,
-    "width": 900,
     price: 25.26,
     rating: 5
   }, {
@@ -246,8 +244,6 @@ const products = [
     category: "vegetable",
     description: "Raw fresh asparagus salad with cheese and dressing",
     image: "34.jpg",
-    "height": 600,
-    "width": 400,
     price: 22.97,
     rating: 4
   }, {
@@ -258,7 +254,7 @@ const products = [
     price: 13.55,
     rating: 2
   }, {
-    name: "Vegan",
+    name: "Carrots",
     category: "vegan",
     description: "Concept of healthy vegan eating",
     image: "36.jpg",
@@ -314,12 +310,12 @@ const products = [
     price: 18.32,
     rating: 3
   }, {
-    name: "Strawberries",
+    name: "Strawberry",
     category: "fruit",
     description: "Healthy breakfast set. rice cereal or porridge with fresh strawberry, apricots, almond and honey over white rustic wood backdrop, top view, \u0000",
     image: "44.jpg",
     price: 15.13,
-    rating: 3
+    rating: 1
   }, {
     name: "Ground beef meat burger",
     category: "meat",

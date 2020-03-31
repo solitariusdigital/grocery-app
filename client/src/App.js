@@ -1,48 +1,56 @@
 import React, { Component } from 'react'
 import Products from './components/products/Products'
+import SearchBar from './components/searchbar/SearchBar'
+import Footer from './components/footer/Footer'
 
 import './App.css'
 
-export default class SearchBar extends Component {
+export default class App extends Component {
 
   state = {
+    fetchedProducts: [],
     search: '',
-    searchedProduct: ''
+    products: []
+  }
+
+  componentDidMount() {
+    fetch('/grocery')
+    .then(res => res.json())
+    .then(fetchedProducts => this.setState({fetchedProducts}, () => console.log('products fetched...', fetchedProducts)))
   }
 
   handleChange = e => {
     this.setState({
         search: e.target.value
     })
-    // console.log(this.state.search)
   }
 
-  handleClick = (e) => {
+  handleClick = e => {
     e.preventDefault();
-    this.setState({
-        searchedProduct: this.state.search
-    })
-    // console.log(this.state.searchedProduct)
+
+    const { search, fetchedProducts } = this.state
+
+    const products = fetchedProducts.filter(product => {
+      return product.name.toLowerCase().match(search.toLowerCase())
+    });
+    this.setState({ products })
   }
 
   render() {
 
-    const { searchedProduct } = this.state
+    const { products, search } = this.state
 
     return (
       <React.Fragment>
-        <form className="search-bar">
-          <input 
-            className="search-input" 
-            type="text" 
-            value={this.state.search}
+        <div className="container">
+          <SearchBar 
             onChange={this.handleChange}
+            onClick={this.handleClick}
+            value={search}
           />
-          <button className="search-btn" onClick={this.handleClick}>
-            Search
-          </button>
-        </form>
-        <Products searchedProduct={searchedProduct} />
+          <Products products={products} />
+        </div>
+        <Footer />
       </React.Fragment>
     )
   }
