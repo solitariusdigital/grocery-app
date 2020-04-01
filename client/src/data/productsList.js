@@ -1,353 +1,303 @@
 const products = [
   {
     name: "Brown eggs",
-    category: "dairy",
-    description: "Raw organic brown eggs in a basket",
+    category: "Diary",
     image: "0.jpg",
     price: 28.1,
     rating: 4
   }, {
-    name: "Sweet fresh strawberry",
-    category: "fruit",
-    description: "Sweet fresh strawberry on the wooden table",
+    name: "Sweet strawberry",
+    category: "Fruit",
     image: "1.jpg",
     price: 29.45,
     rating: 4
   }, {
     name: "Asparagus",
-    category: "vegetable",
-    description: "Asparagus with ham on the wooden table",
+    category: "Vegetable",
     image: "2.jpg",
     price: 18.95,
     rating: 3
   }, {
     name: "Green smoothie",
-    category: "dairy",
-    description: "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
+    category: "Diary",
     image: "3.jpg",
     price: 17.68,
     rating: 4
   }, {
     name: "Raw legums",
-    category: "vegetable",
-    description: "Raw legums on the wooden table",
+    category: "Vegetable",
     image: "4.jpg",
     price: 17.11,
     rating: 2
   }, {
     name: "Baking cake",
-    category: "dairy",
-    description: "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
+    category: "Bakery",
     image: "5.jpg",
     price: 11.14,
     rating: 4
   }, {
     name: "Pesto with basil",
-    category: "vegetable",
-    description: "Italian traditional pesto with basil, chesse and oil",
+    category: "Vegetable",
     image: "6.jpg",
     price: 18.19,
     rating: 2
   }, {
     name: "Hazelnut",
-    category: "vegetable",
-    description: "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+    category: "Vegetable",
     image: "7.jpg",
 
     price: 27.35,
     rating: 0
   }, {
     name: "Fresh strawberry",
-    category: "fruit",
-    description: "Sweet fresh strawberry on the wooden table",
+    category: "Fruit",
     image: "8.jpg",
     price: 28.59,
     rating: 4
   }, {
     name: "Lemon and salt",
-    category: "fruit",
-    description: "Rosemary, lemon and salt on the table",
+    category: "Fruit",
     image: "9.jpg",
     price: 15.79,
     rating: 5
   }, {
     name: "Homemade bread",
-    category: "bakery",
-    description: "Homemade bread",
+    category: "Bakery",
     image: "10.jpg",
     price: 17.48,
     rating: 3
   }, {
     name: "Legums",
-    category: "vegetable",
-    description: "Cooked legums on the wooden table",
+    category: "Vegetable",
     image: "11.jpg",
     price: 14.77,
     rating: 0
   }, {
     name: "Fresh tomato",
-    category: "vegetable",
-    description: "Fresh tomato juice with basil",
+    category: "Vegetable",
     image: "12.jpg",
     price: 16.3,
     rating: 2
   }, {
     name: "Blueberries",
-    category: "fruit",
-    description: "Healthy breakfast set. rice cereal or porridge with berries and honey over rustic wood background",
+    category: "Fruit",
     image: "13.jpg",
     price: 13.02,
     rating: 2
   }, {
     name: "Green beans",
-    category: "vegetable",
-    description: "Raw organic green beans ready to eat",
+    category: "Vegetable",
     image: "14.jpg",
     price: 28.79,
     rating: 1
   }, {
     name: "Mushrooms",
-    category: "bakery",
-    description: "Homemade baked stuffed portabello mushrooms with spinach and cheese",
+    category: "Bakery",
     image: "15.jpg",
     price: 20.31,
     rating: 1
   }, {
     name: "Strawberry jelly",
-    category: "fruit",
-    description: "Homemade organic strawberry jelly in a jar",
+    category: "Fruit",
     image: "16.jpg",
     price: 14.18,
     rating: 1
   }, {
     name: "Pears juice",
-    category: "fruit",
-    description: "Fresh pears juice on the wooden table",
+    category: "Fruit",
     image: "17.jpg",
     price: 19.49,
     rating: 4
   }, {
     name: "Fresh pears",
-    category: "fruit",
-    description: "Sweet fresh pears on the wooden table",
+    category: "Fruit",
     image: "18.jpg",
     price: 15.12,
     rating: 5
   }, {
     name: "Caprese salad",
-    category: "vegetable",
-    description: "Homemade healthy caprese salad with tomato mozzarella and basil",
+    category: "Vegetable",
     image: "19.jpg",
     price: 16.76,
     rating: 5
   }, {
     name: "Oranges",
-    category: "fruit",
-    description: "Orange popsicle ice cream bars made from fresh oranges.  a refreshing summer treat.",
+    category: "Fruit",
     image: "20.jpg",
   
     price: 21.48,
     rating: 4
   }, {
     name: "Green tomatoes",
-    category: "vegetable",
-    description: "Concept of vegan food",
+    category: "Vegetable",
     image: "21.jpg",
     price: 29.66,
     rating: 4
   }, {
     name: "Breakfast with muesli",
-    category: "dairy",
-    description: "Concept of healthy breakfast with muesli",
+    category: "Diary",
     image: "22.jpg",
     price: 22.7,
     rating: 2
   }, {
     name: "Honey",
-    category: "bakery",
-    description: "Honey and honeycell on the table",
+    category: "Bakery",
     image: "23.jpg",
     price: 17.01,
     rating: 2
   }, {
     name: "Breakfast with cottage",
-    category: "fruit",
-    description: "Healthy breakfast with cottage cheese and strawberry",
+    category: "Fruit",
     image: "24.jpg",
     price: 14.05,
     rating: 1
   }, {
     name: "Strawberry smoothie",
-    category: "fruit",
-    description: "Glass of red strawberry smoothie with chia seeds, served with retro cocktail tube, fresh mint and strawberries over dark background",
+    category: "Fruit",
     image: "25.jpg",
     price: 28.86,
     rating: 2
   }, {
     name: "Strawberry and mint",
-    category: "fruit",
-    description: "Homemade muesli with strawberry and mint",
+    category: "Fruit",
     image: "26.jpg",
     price: 26.21,
     rating: 4
   }, {
     name: "Ricotta",
-    category: "dairy",
-    description: "Ricotta with berry and mint",
+    category: "Diary",
     image: "27.jpg",
     price: 27.81,
     rating: 5
   }, {
     name: "Cuban bread",
-    category: "bakery",
-    description: "Homemade traditional cuban sandwiches with ham pork and cheese",
+    category: "Bakery",
     image: "28.jpg",
     price: 18.5,
     rating: 4
   }, {
     name: "Granola",
-    category: "dairy",
-    description: "Glass jar with homemade granola and yogurt with nuts, raspberries and blackberries on wooden cutting board over white textile in day light",
+    category: "Diary",
     image: "29.jpg",
     price: 29.97,
     rating: 3
   }, {
     name: "Honey",
-    category: "bakery",
-    description: "Glass of red strawberry smoothie with chia seeds, served with retro cocktail tube, fresh mint and strawberries over wooden table",
+    category: "Bakery",
     image: "30.jpg",
     price: 25.26,
     rating: 5
   }, {
     name: "Yogurt",
-    category: "dairy",
-    description: "Homemade yogurt with raspberry and mint",
+    category: "Diary",
     image: "31.jpg",
     price: 27.61,
     rating: 4
   }, {
-    name: "Sandwich with salad",
-    category: "vegetable",
-    description: "Vegan sandwich with salad, tomato and radish",
+    name: "Bread",
+    category: "Bakery",
     image: "32.jpg",
     price: 22.48,
     rating: 5
   }, {
     name: "Cherry",
-    category: "fruit",
-    description: "Cherry with sugar on old table",
+    category: "Fruit",
     image: "33.jpg",
     price: 14.35,
     rating: 5
   }, {
     name: "Raw asparagus",
-    category: "vegetable",
-    description: "Raw fresh asparagus salad with cheese and dressing",
+    category: "Vegetable",
     image: "34.jpg",
     price: 22.97,
     rating: 4
   }, {
     name: "Corn",
-    category: "vegetable",
-    description: "Grilled corn on the cob with salt and butter",
+    category: "Vegetable",
     image: "35.jpg",
     price: 13.55,
     rating: 2
   }, {
     name: "Carrots",
-    category: "vegan",
-    description: "Concept of healthy vegan eating",
+    category: "Vegan",
     image: "36.jpg",
     price: 28.96,
     rating: 5
   }, {
     name: "Fresh blueberries",
-    category: "fruit",
-    description: "Healthy breakfast. berry crumble with fresh blueberries, raspberries, strawberries, almond, walnuts, pecans, yogurt, and mint in ceramic plates over white wooden surface, top view",
+    category: "Fruit",
     image: "37.jpg",
     price: 21.01,
     rating: 4
   }, {
     name: "Smashed avocado",
-    category: "fruit",
-    description: "Vegan sandwiches with smashed avocado, tomatoes and radish. top view",
+    category: "Fruit",
     image: "38.jpg",
     price: 25.88,
-    rating: 0
+    rating: 1
   }, {
-    name: "Italian ciabatta",
-    category: "bakery",
-    description: "Italian ciabatta bread cut in slices on wooden chopping board with herbs, garlic and olives over dark grunge backdrop, top view",
+    name: "Italian bread",
+    category: "Bakery",
     image: "39.jpg",
     price: 15.18,
     rating: 1
   }, {
     name: "Rustic breakfast",
-    category: "dairy",
-    description: "Rustic healthy breakfast set. cooked buckwheat groats with milk and honey on dark grunge backdrop. top view, copy space",
+    category: "Diary",
     image: "40.jpg",
     price: 21.32,
-    rating: 0
+    rating: 1
   }, {
     name: "Sliced lemons",
-    category: "fruit",
-    description: "Heap of whole and sliced lemons and limes with mint in vintage metal grid box over old wooden table with turquoise wooden background. dark rustic style.",
+    category: "Fruit",
     image: "41.jpg",
     price: 27.14,
     rating: 2
   }, {
     name: "Plums",
-    category: "fruit",
-    description: "Yellow and red sweet plums",
+    category: "Fruit",
     image: "42.jpg",
     price: 19.18,
     rating: 1
   }, {
     name: "French fries",
-    category: "bakery",
-    description: "Homemade oven baked french fries with ketchup",
+    category: "Bakery",
     image: "43.jpg",
     price: 18.32,
     rating: 3
   }, {
     name: "Strawberry",
-    category: "fruit",
-    description: "Healthy breakfast set. rice cereal or porridge with fresh strawberry, apricots, almond and honey over white rustic wood backdrop, top view, \u0000",
+    category: "Fruit",
     image: "44.jpg",
     price: 15.13,
     rating: 1
   }, {
     name: "Ground beef meat burger",
-    category: "meat",
-    description: "Raw ground beef meat burger steak cutlets with seasoning on vintage wooden boards, black background",
+    category: "Meat",
     image: "45.jpg",
     price: 11.73,
     rating: 5
   }, {
     name: "Tomatoes",
-    category: "fruit",
-    description: "Organic tomatoes made with love",
+    category: "Fruit",
     image: "46.jpg",
     price: 26.03,
     rating: 4
   }, {
     name: "Basil",
-    category: "vegetable",
-    description: "Concept of vegan food with basil",
+    category: "Vegetable",
     image: "47.jpg",
     price: 15.19,
     rating: 4
   }, {
     name: "Fruits bouquet",
-    category: "fruit",
-    description: "Abstract citrus fruits bouquet on blue background",
+    category: "Fruit",
     image: "48.jpg",
     price: 18.18,
     rating: 1
   }, {
     name: "Peaches on branch",
-    category: "fruit",
-    description: "Peaches on branch with leaves and glasses with peach juice and limonade with ice cubes in aluminum tray over old metal table. dark rustic style. top view.",
+    category: "Fruit",
     image: "49.jpg",
     price: 25.62,
     rating: 3

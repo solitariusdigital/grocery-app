@@ -29,11 +29,14 @@ export default class App extends Component {
     e.preventDefault();
 
     const { search, fetchedProducts } = this.state
-
-    const products = fetchedProducts.filter(product => {
-      return product.name.toLowerCase().match(search.toLowerCase())
-    });
-    this.setState({ products })
+    
+    if(this.state.search !== '') {
+      const products = fetchedProducts.filter(product => {
+        return product.name.toLowerCase().match(search.toLowerCase())
+      });
+      
+      this.setState({ products })
+    }
   }
 
   render() {
