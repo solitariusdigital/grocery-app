@@ -17,6 +17,11 @@
     border: 1px solid #a1a1a1;
 }
 
+.search-input:focus,
+.search-btn:focus {
+    outline: none;
+}
+
 input[type=text] {
     padding: 15px 20px;
     box-sizing: border-box;  
@@ -32,6 +37,7 @@ input[type=text] {
     padding-left: 20px;
     padding-right: 20px;
     font-weight: bold;
+    font-size: 12px;
 }
 
 .search-btn:hover {
