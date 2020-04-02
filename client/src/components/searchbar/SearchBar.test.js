@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import SearchBar from './SearchBar';
 
+it('simulate onChange for input search', () => {
 
-it('simulates click events', () => {
-    const wrapper = shallow(<SearchBar />);
-    const input = wrapper.find('input');
-    input.simulate('change', { target: {value: 'strawberry'} });
+    const mockOnChange = jest.fn();
+    const wrapper = shallow(<SearchBar onChange={mockOnChange} />);
+    wrapper.find('input').simulate('change', { target: {value: 'strawberry'} });
 
-    expect(input.prop('value')).toEqual('strawberry');
+    expect(mockOnChange).toBeCalledWith({ target: {value: 'strawberry'} });
 });
