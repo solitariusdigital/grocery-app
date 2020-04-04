@@ -1,4 +1,4 @@
-const products = [
+const productsList = [
   {
     name: "Brown eggs",
     category: "Diary",
@@ -304,4 +304,4 @@ const products = [
   }
 ]
 
-module.exports = products;
+module.exports = productsList;

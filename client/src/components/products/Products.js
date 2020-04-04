@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './Products.css'
 
 export default class Products extends Component {
-      
+
     renderProducts = (product, index) => {
         return (
             <div key={index} className="product-grid">
@@ -25,13 +25,11 @@ export default class Products extends Component {
     } 
 
     render() {
-        
         const { products } = this.props
-
         return (
             <div className="product-card">
-                {products.map(this.renderProducts)}
+                {products && products.map(this.renderProducts)}
             </div>
         )
     }
-}
+};

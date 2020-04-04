@@ -1,47 +1,42 @@
-import React, { Component } from 'react'
-import Products from './components/products/Products'
-import SearchBar from './components/searchbar/SearchBar'
-import Footer from './components/footer/Footer'
+import React, { Component } from 'react';
+import Products from './components/products/Products';
+import SearchBar from './components/searchbar/SearchBar';
+import Footer from './components/footer/Footer';
+
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as allActions from './store/actions/action';
 
 import './App.css'
 
-export default class App extends Component {
+class App extends Component {
 
   state = {
-    fetchedProducts: [],
-    search: '',
-    products: []
+    searchTerm: '',
   }
 
   componentDidMount() {
-    fetch('/grocery')
-    .then(res => res.json())
-    .then(fetchedProducts => this.setState({fetchedProducts}, () => console.log('products fetched...', fetchedProducts)))
-  }
+    const {searchTerm} = this.state
+    this.props.fetchProductsSuccess(searchTerm)
+  };
 
   handleChange = e => {
     this.setState({
-        search: e.target.value
+        searchTerm: e.target.value
     })
   }
 
   handleClick = e => {
     e.preventDefault();
-
-    const { search, fetchedProducts } = this.state
-    
-    if(this.state.search !== '') {
-      const products = fetchedProducts.filter(product => {
-        return product.name.toLowerCase().match(search.toLowerCase())
-      });
-      
-      this.setState({ products })
-    }
-  }
+    const {searchTerm} = this.state
+    this.props.fetchProductsSuccess(searchTerm)
+  };
 
   render() {
 
-    const { products, search } = this.state
+    console.log(this.props)
+    const { products } = this.props
+    const { searchTerm } = this.state
 
     return (
       <React.Fragment>
@@ -49,7 +44,7 @@ export default class App extends Component {
           <SearchBar 
             onChange={this.handleChange}
             onClick={this.handleClick}
-            value={search}
+            value={searchTerm}
           />
           <Products products={products} />
         </div>
@@ -57,4 +52,18 @@ export default class App extends Component {
       </React.Fragment>
     )
   }
-}
+};
+
+const mapStatetoProps = state => {
+  return {
+    products: state.products,
+    pending: state.pending,
+    error: state.error
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {...bindActionCreators(allActions, dispatch)}
+};
+
+export default connect(mapStatetoProps, mapDispatchToProps)(App);
