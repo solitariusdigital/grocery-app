@@ -5,17 +5,33 @@
 }
 
 body {
+  overflow: hidden;
   background: #f0f2f5;
   text-align: center;
   font-family: 'Trebuchet MS';
   height: 100%;
 }
 
-#root {
-  position: relative;
-  min-height: 95vh;
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 110px;
+  height: 100vh;
 }
 
-.container {
-  padding-bottom: 110px;
+.products {
+  overflow: auto;
+  flex: 1;
+  height: 100%;
+}
+
+.loading {
+  margin-top: 10px;
+  color: green;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
 }

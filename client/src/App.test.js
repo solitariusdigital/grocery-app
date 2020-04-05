@@ -1,14 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import App from './App';
+import { App } from './App';
 import SearchBar from './components/searchbar/SearchBar';
 import Products from './components/products/Products';
 import Footer from './components/footer/Footer';
 
 it('should render SearchBar, Products and Footer', () => {
-    
-    const wrapper = shallow(<App />);
+
+    const mockOnChange = jest.fn();
+    const wrapper = shallow(<App fetchProducts={mockOnChange}/>);
 
     const searchbar = wrapper.find(SearchBar);
     expect(searchbar.exists()).toBe(true);

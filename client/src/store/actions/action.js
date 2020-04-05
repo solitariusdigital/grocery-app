@@ -9,20 +9,23 @@ export const fetchProductsPending = () => {
     }
 };
 
-export const fetchProductsSuccess = searchTerm => { 
+export const fetchProducts = searchTerm => { 
     return dispatch => { 
+        dispatch(fetchProductsPending());
         fetch(`/grocery?searchTerm=${searchTerm}`)
-            .then(res => res.json())
-            .then(products => {
-                if(products.error) {
-                    throw(products.error);
-                }
-                dispatch({
-                    type: FETCH_PRODUCTS_SUCCESS,
-                    products: products
-                })
+        .then(res => res.json())
+        .then(products => {
+            if(products.error) {
+                throw(products.error);
             }
-        )
+            dispatch({
+                type: FETCH_PRODUCTS_SUCCESS,
+                products: products
+            })
+        })
+        .catch(error => {
+            dispatch(fetchProductsError(error));
+        }) 
     }
 };
 

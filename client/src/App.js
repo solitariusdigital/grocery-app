@@ -9,33 +9,40 @@ import * as allActions from './store/actions/action';
 
 import './App.css'
 
-class App extends Component {
+export class App extends Component {
 
   state = {
     searchTerm: '',
-  }
+  };
 
+  // initial render of products
   componentDidMount() {
     const {searchTerm} = this.state
-    this.props.fetchProductsSuccess(searchTerm)
+    this.props.fetchProducts(searchTerm)
   };
 
   handleChange = e => {
     this.setState({
-        searchTerm: e.target.value
+      searchTerm: e.target.value
     })
-  }
+  };
 
   handleClick = e => {
     e.preventDefault();
     const {searchTerm} = this.state
-    this.props.fetchProductsSuccess(searchTerm)
+    this.props.fetchProducts(searchTerm)
+  };
+
+  renderError = () => {
+    return (
+      <h2 className="error">loading failed...</h2>
+    )
   };
 
   render() {
 
     console.log(this.props)
-    const { products } = this.props
+    const { products, error, pending } = this.props
     const { searchTerm } = this.state
 
     return (
@@ -46,7 +53,11 @@ class App extends Component {
             onClick={this.handleClick}
             value={searchTerm}
           />
-          <Products products={products} />
+          {pending && <h2 className="loading">products are loading...</h2>}
+          {error ? this.renderError() : 
+          <div className="products">
+            <Products products={products}/>
+          </div>}
         </div>
         <Footer />
       </React.Fragment>
