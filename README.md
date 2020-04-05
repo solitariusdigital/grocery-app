@@ -1,6 +1,6 @@
 ## `Grocery app`
 
-An online market place for the user to search from range of grocery items.
+An online marketplace for the user to search from range of grocery items.
 
 ## `Wireframe`
 
