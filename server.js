@@ -3,11 +3,14 @@ const productsList = require('./client/src/data/productsList');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'build')));
+// Express only serves static assets in production
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("frontend/build"));
+}
 
-app.get('/*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
+app.get('/', (req, res) => {
+    res.json({welcome: 'grocery-api'})
+});
 
 app.get('/grocery', (req, res) => {
 	let searchTerm = req.query.searchTerm;
