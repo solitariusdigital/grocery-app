@@ -3,6 +3,12 @@ const productsList = require('./client/src/data/productsList');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'build', 'index.html'));
+})
+
 app.get('/grocery', (req, res) => {
 	let searchTerm = req.query.searchTerm;
 
@@ -17,6 +23,7 @@ app.get('/grocery', (req, res) => {
 		return res.json(products);
 	}
 });
+
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`server is listening on port ${port}`));
